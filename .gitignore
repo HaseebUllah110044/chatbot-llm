@@ -1,0 +1,36 @@
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Conda
+.envs/
+conda-meta/
+
+# Environment variables
+.env
+
+# SQLite database
+*.db
+*.sqlite3
+
+# Alembic cache
+alembic/__pycache__/
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
