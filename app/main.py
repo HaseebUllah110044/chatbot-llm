@@ -11,7 +11,9 @@ from app.routers.Intentroutes import router as intent_router
 from app.routers.Phraseroutes import router as phrase_router
 from app.routers.Responseroutes import router as response_router
 from app.routers.Massege import router as msg_router
+from fastapi.middleware.cors import CORSMiddleware
 app=FastAPI()
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 app.include_router(auth_router)
 app.include_router(convo_router)
 app.include_router(msg_router)

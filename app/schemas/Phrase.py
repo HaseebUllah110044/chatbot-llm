@@ -11,7 +11,7 @@ class PhraseUpdate(BaseModel):
     PhraseText: str
 
 class PhraseResponse(BaseModel):
-    PhraseID:int
+    PhraseID:int | None=None
     IntentID:int
     PhraseText:str
     class Config():
