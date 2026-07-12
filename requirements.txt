@@ -20,3 +20,4 @@ PyYAML
 rsa==4.9.1
 SQLAlchemy==2.0.51
 uvicorn[standard]
+psycopg[binary]

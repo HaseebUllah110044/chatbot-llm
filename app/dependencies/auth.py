@@ -12,7 +12,7 @@ def current_user(credentials:HTTPAuthorizationCredentials=Depends(security),db:S
     payload=decode_access_token(token)
     if payload is None:
         raise InvalidCredentialException
-    userid=payload.get('sub')
+    userid=int(payload.get('sub'))
     if userid is None:
         raise InvalidCredentialException
     user=get_by_id(userid,db)
