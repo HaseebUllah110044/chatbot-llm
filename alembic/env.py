@@ -12,6 +12,9 @@ from app.models.Response import Response
 from app.models.Phrase import Phrase
 from app.models.Conversation import Conversation
 from app.models.Message import Message
+from app.models.Summary import Summary
+from app.models.document import Document
+from app.models.documnet_chunks import DocumentChunk
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config

@@ -7,9 +7,7 @@ from app.exceptions.custom_exceptions import (usernotfoundException,Useralreadye
 ConvoNotFoundException,IntentAlreadyExistsException,IntentNotFoundException,PhraseAlreadyExistsException,
 PhraseNotFoundException,ResponseNotFoundException,NotAdminException)
 from app.routers.Conversation import router as convo_router
-from app.routers.Intentroutes import router as intent_router
-from app.routers.Phraseroutes import router as phrase_router
-from app.routers.Responseroutes import router as response_router
+from app.routers.ingestionroute import router as ingestion_router
 from app.routers.Massege import router as msg_router
 from fastapi.middleware.cors import CORSMiddleware
 app=FastAPI()
@@ -17,9 +15,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5500"], allo
 app.include_router(auth_router)
 app.include_router(convo_router)
 app.include_router(msg_router)
-app.include_router(intent_router)
-app.include_router(phrase_router)
-app.include_router(response_router)
+app.include_router(ingestion_router)
 app.add_exception_handler(usernotfoundException,user_notfound_handler)
 app.add_exception_handler(UseralreadyexsistException,user_exsist_handler)
 app.add_exception_handler(InvalidCredentialException,invalid_credentials_handler)

@@ -10,3 +10,14 @@ class Message(Base):
     MessageText=Column(Text,nullable=False,unique=False)
     MessageDateTime=Column(DateTime,default=datetime.utcnow)
     conversation=relationship("Conversation",back_populates="messages")
+    start_summaries = relationship(
+    "Summary",
+    foreign_keys="[Summary.StartMsg]",
+    back_populates="start_message"
+)
+
+    end_summaries = relationship(
+    "Summary",
+    foreign_keys="[Summary.EndMsg]",
+    back_populates="end_message"
+)

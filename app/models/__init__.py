@@ -4,3 +4,6 @@ from app.models.Message import Message
 from app.models.Intent import Intent
 from app.models.Phrase import Phrase
 from app.models.Response import Response
+from app.models.Summary import Summary
+from app.models.document import Document
+from app.models.documnet_chunks import DocumentChunk

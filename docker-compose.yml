@@ -1,9 +1,9 @@
 services:
 
-  chatbot:
+  chatbotllm:
     build: .
 
-    container_name: chatbot-api
+    container_name: chatbotllm-api
 
     ports:
       - "8000:8000"
@@ -21,7 +21,7 @@ services:
 
 
   postgres:
-    image: postgres:16
+    image: pgvector/pgvector:pg16
 
     container_name: chatbot-postgres
 

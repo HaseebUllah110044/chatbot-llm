@@ -10,3 +10,4 @@ class Conversation(Base):
     ConversationDateTime=Column(DateTime,default=datetime.utcnow)
     user=relationship("User",back_populates="conversations")
     messages=relationship("Message",back_populates="conversation")
+    summaries=relationship("Summary",back_populates="conversation")
