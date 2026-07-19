@@ -14,7 +14,7 @@ app=FastAPI()
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173","https://suparco-frontend-mu.vercel.app/"], allow_methods=["*"], allow_headers=["*"])
+app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173","https://suparco-frontend-mu.vercel.app"], allow_methods=["*"], allow_headers=["*"])
 app.include_router(auth_router)
 app.include_router(convo_router)
 app.include_router(msg_router)
