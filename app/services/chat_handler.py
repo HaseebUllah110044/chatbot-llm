@@ -22,10 +22,6 @@ def chat_handle(payload:UserResponse,convoID:int,userID:int,db:Session):
         "role":"user",
         "content":payload.PhraseText
     })
-    for item in ai_context:
-        print("====================")
-        print("ROLE:", item["role"])
-        print(item["content"])
     count=count_token(ai_context)
     print(count)
     bot=generate_respone(ai_context)
